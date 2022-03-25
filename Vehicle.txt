@@ -1,0 +1,47 @@
+class Vehicle{
+long regNo;
+String brand;
+double price;
+double mileage;
+public Vehicle(long regNo, String brand, double price, double
+mileage) {
+this.regNo = regNo;
+this.brand = brand;
+this.price = price;
+this.mileage = mileage;
+}
+public double getPrice() {
+return price;
+}
+public double getMileage() {
+return mileage;
+}
+void display() {
+System.out.println("The registration no. of the Vehicle 
+is " + regNo);
+System.out.println("The brand of the Vehicle is " + 
+brand);
+System.out.println("The price of the Vehicle is Rs " + 
+price);
+System.out.println("The mileage of the Vehicle is " + 
+mileage + " km/l");
+}
+void displayPrice() {
+System.out.println("The price of the Vehicle is Rs " + 
+price);
+}
+}
+public class Ex1 {
+public static void main(String[] args) {
+Vehicle v1 = new Vehicle(87541,"Maruti Suzuki", 650000, 
+22.05);
+Vehicle v2 = new Vehicle(75491,"Ford", 800000, 25.07);
+System.out.println("The Vehicle with lowest price: ");
+Vehicle v3 = v1.getPrice() < v2.getPrice() ? v1 : v2;
+v3.display();
+System.out.println();
+System.out.println("The vehicle with best mileage: ");
+Vehicle v4 = v1.getMileage() > v2.getMileage() ? v1:v2;
+v4.display();
+}
+}
